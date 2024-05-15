@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HELLOME</title>
+    <link rel="icon" href="img/brand_hello_kitty_icon_158867.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/endereco.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="../js/endereco.js"></script>
+    <script src="../js/getEndereco.js"></script>
+</head>
+
+<body>
+    <div class="chinelo">
+        <div class="cordão"></div>
+    </div>
+
+    <div class="header" id="topo">
+        <div class="container">
+
+
+            <!--REQUIRED:  validação do lado do cliente que impede que o formulário seja enviado sem que o campo correspondente seja preenchido.-->
+            <form id="endereco"> <!-- Formulário de cadastro -->
+                <div>
+                    <input type="text" id="title" placeholder="Titulo" class="inputs required"
+                        oninput="tituloValidate()" /> <!-- Campo de entrada para o nome  -->
+                    <span class="span-required">Título tem que ser preenchido, mínimo 4 caracteres.</span>
+                </div>
+                <div>
+                    <input type="text" id="cep" placeholder="CEP" class="inputs required" oninput="cepValidate()" />
+                    <!-- Campo de entrada para o email  -->
+                    <span class="span-required">Digite um cep valido.</span>
+                </div>
+                <div>
+                    <input type="text" id="address" placeholder="Endereco" class="inputs required"
+                        oninput="enderecoValidate()" /> <!-- Campo de entrada para a senha -->
+                    <span class="span-required">Digite o endereço valido.</span>
+                </div>
+                <div>
+                    <input type="text" id="number" placeholder="Número" class="inputs required"
+                        oninput="numeroValidate()" /> <!-- Campo de entrada para a confirmação da senha -->
+                    <span class="span-required">Digite o número.</span>
+                </div>
+                <div>
+                    <input type="text" id="complement" placeholder="Complemento" oninput="complementoValidate()" />
+                    <!-- Campo de entrada para a confirmação da senha -->
+                    <span>Digite um complemento (opcional).</span>
+                </div>
+
+                <input type="button" onclick="enderecoUsuario()" value="Enviar">
+                <!-- Botão de envio do formulário de cadastro -->
+            </form>
+
+        </div>
+    </div>
+
+    </div>
+
+</body>
+
+</html>

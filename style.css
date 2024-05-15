@@ -1,0 +1,323 @@
+/* Define estilos para todos os elementos HTML */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Define a fonte para o corpo do documento */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Define estilos para a barra de navegação */
+.navbar {
+    position: fixed; /* Fixa a barra de navegação na parte superior da janela de visualização */
+    display: flex; /* Usa um layout flexível para os itens da barra de navegação */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+    padding: 20px; /* Adiciona espaçamento interno de 20px */
+    z-index: 9999; /* Define a ordem de empilhamento */
+    top: 0; /* Alinha a barra de navegação no topo */
+    left: 0; /* Alinha a barra de navegação à esquerda */
+    width: 100%; /* Define a largura da barra de navegação como 100% da largura da janela de visualização */
+}
+
+/* Estilos para a seção de navegação dentro da barra de navegação */
+nav {
+    flex: 1; /* Ocupa o espaço restante disponível */
+    text-align: right; /* Alinha o texto à direita */
+}
+
+/* Estilos para a lista não ordenada dentro da navegação */
+nav ul {
+    display: inline-block; /* Exibe a lista em linha */
+    list-style-type: none; /* Remove os marcadores de lista */
+}
+
+/* Estilos para os itens da lista dentro da navegação */
+nav ul li {
+    display: inline-block; /* Exibe os itens em linha */
+    margin-right: 20px; /* Adiciona espaçamento à direita entre os itens */
+}
+
+/* Estilos para links */
+a {
+    text-decoration: none; /* Remove a decoração padrão dos links */
+    color: #555; /* Define a cor do texto para cinza */
+}
+
+/* Estilos para parágrafos */
+p {
+    color: #555; /* Define a cor do texto para cinza */
+}
+
+/* Estilos para o contêiner principal */
+.container {
+    max-width: 1300px; /* Define a largura máxima do contêiner */
+    margin: auto; /* Centraliza o contêiner horizontalmente */
+    padding-left: 25px; /* Adiciona preenchimento à esquerda */
+    padding-right: 25px; /* Adiciona preenchimento à direita */
+    padding-top: 80px; /* Adiciona preenchimento acima */
+}
+/* Estilos para as linhas de conteúdo */
+.row {
+    display: flex; /* Usa um layout flexível para as linhas */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha conforme necessário */
+    justify-content: space-around; /* Distribui uniformemente os itens com espaço ao redor */
+}
+
+/* Estilos para colunas de largura 50% */
+.col-2 {
+    flex-basis: 50%; /* Define a base flexível da largura para 50% */
+    min-width: 30%; /* Define a largura mínima */
+}
+
+/* Estilos para imagens dentro de colunas */
+.col-2 img {
+    max-width: 94%; /* Define a largura máxima da imagem */
+    padding-left: 20px; /* Adiciona preenchimento à esquerda */
+}
+
+/* Estilos para títulos */
+.col-2 h1 {
+    font-size: 50px; /* Define o tamanho da fonte */
+    line-height: 60px; /* Define a altura da linha */
+    margin: 25px 0; /* Define margens superior e inferior */
+}
+
+/* Estilos para botões */
+.btn {
+    display: inline-block; /* Exibe o botão em linha */
+    background: #cf184f; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    padding: 8px 30px; /* Adiciona preenchimento */
+    margin: 30px 0; /* Define margens superior e inferior */
+    border-radius: 30px; /* Adiciona bordas arredondadas */
+    transition: background 0.5s; /* Adiciona transição suave */
+}
+
+/* Estilos de hover para botões */
+.btn:hover {
+    background: #d15492; /* Altera a cor de fundo ao passar o mouse sobre o botão */
+}
+
+/* Estilos para a seção de cabeçalho */
+.header {
+    background: radial-gradient(#e46685ec, #ffffff); /* Define um plano de fundo com gradiente radial */
+}
+
+/* Estilos para a seção de categorias */
+.categorias {
+    margin: 70px 0; /* Define margens superior e inferior */
+}
+
+/* Estilos para colunas de largura 30% */
+.col-3 {
+    flex-basis: 30%; /* Define a base flexível da largura para 30% */
+    min-width: 250px; /* Define a largura mínima */
+    margin-bottom: 30px; /* Define margem inferior */
+}
+
+/* Estilos para imagens dentro de colunas de categoria */
+.col-3 img {
+    width: 100%; /* Define a largura da imagem como 100% */
+}
+
+/* Estilos para o contêiner pequeno */
+.small-container {
+    max-width: 1000px; /* Define a largura máxima */
+    margin: auto; /* Centraliza horizontalmente */
+    padding-left: 25px; /* Adiciona preenchimento à esquerda */
+    padding-right: 25px; /* Adiciona preenchimento à direita */
+}
+
+/* Estilos para colunas de largura 25% */
+.col-4 {
+    flex-basis: 25%; /* Define a base flexível da largura para 25% */
+    padding: 10px; /* Adiciona preenchimento */
+    min-width: 200px; /* Define a largura mínima */
+    transition: transform .5s; /* Adiciona uma transição suave */
+    margin-bottom: 50px; /* Define margem inferior */
+}
+
+/* Estilos para imagens dentro de colunas de largura 25% */
+.col-4 img {
+    width: 95%; /* Define a largura da imagem como 95% */
+    height: 310px; /* Define a altura da imagem */
+}
+/* Estilos para imagens dentro do carrossel */
+.slider .col-4 img {
+    width: 85%; /* Define a largura da imagem como 85% */
+    height: 320px; /* Define a altura da imagem */
+}
+
+
+/* Estilos para títulos */
+.titulo {
+    text-align: center; /* Alinha o texto ao centro */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    position: relative; /* Define a posição como relativa */
+    line-height: 60px; /* Define a altura da linha */
+    color: #555; /* Define a cor do texto */
+}
+
+/* Estilos para a linha abaixo do título */
+.titulo::after {
+    content: ''; /* Adiciona um conteúdo vazio */
+    background: #dd74a5; /* Cor de fundo */
+    width: 80px; /* Define a largura */
+    height: 5px; /* Define a altura */
+    border-radius: 5px; /* Adiciona bordas arredondadas */
+    position: absolute; /* Define a posição como absoluta */
+    bottom: 0; /* Alinha na parte inferior */
+    left: 50%; /* Alinha ao centro */
+    transform: translateX(-50%); /* Move para a esquerda em 50% */
+}
+
+/* Estilos para títulos de nível 4 */
+h4 {
+    color: #555; /* Define a cor do texto */
+    font-weight: normal; /* Define o peso da fonte como normal */
+}
+
+/* Estilos para parágrafos dentro de colunas de largura 25% */
+col-4 p {
+    font-size: 14px; /* Define o tamanho da fonte */
+}
+
+/* Estilos para a cor das estrelas de avaliação */
+.avaliacao .fa-star,
+.avaliacao .fa-star-half,
+.avaliacao .fa-star-half-alt,
+.avaliacao .fa-star-o {
+    color: #ff523b; /* Define a cor das estrelas */
+}
+
+/* Efeitos de hover para colunas */
+.col-4:hover {
+    transform: translateY(-5px); /* Move a coluna para cima quando passa o mouse sobre ela */
+}
+
+/* Estilos para a seção de oferta */
+.oferta {
+    background: radial-gradient(#e46685ec, #ffffff); /* Define um plano de fundo com gradiente radial */
+    margin-top: 80px; /* Define a margem superior */
+    padding: 30px 20px; /* Adiciona preenchimento */
+}
+
+/* Estilos para o dropdown */
+.dropdown {
+    position: relative; /* Define a posição como relativa */
+}
+
+/* Estilos para o menu dropdown */
+.dropdown-menu {
+    display: none; /* Oculta o menu dropdown */
+    position: absolute; /* Define a posição como absoluta */
+    top: 100%; /* Alinha o topo do menu dropdown com o elemento pai */
+    left: 0; /* Alinha a esquerda do menu dropdown com o elemento pai */
+    background-color: #fff; /* Cor de fundo */
+    border: 1px solid #ccc; /* Borda */
+    padding: 10px 3; /* Adiciona preenchimento */
+    z-index: 1; /* Define a ordem de empilhamento */
+}
+
+/* Estilos para itens do menu dropdown */
+.dropdown-menu li {
+    display: block; 
+    /* Exibe
+/* os itens do menu dropdown como blocos */
+}
+
+/* Estilos para links dentro do menu dropdown */
+.dropdown-menu li a {
+    display: flex; /* Usa um layout flexível */
+    align-items: center; /* Alinha os itens verticalmente */
+    padding: 5px 15px; /* Adiciona preenchimento */
+    text-decoration: none; /* Remove a decoração de texto padrão */
+    color: #333; /* Define a cor do texto */
+}
+
+/* Estilos de hover para links dentro do menu dropdown */
+.dropdown-menu li a:hover {
+    background-color: #f0f0f0; /* Cor de fundo ao passar o mouse sobre o link */
+}
+
+/* Estilos para o footer */
+footer {
+    background-color: #f5f5f5;
+    padding: 50px 0;
+    margin-top: 50px; /* Adiciona margem superior para separar do conteúdo */
+}
+
+/* Estilos para o contêiner do footer */
+footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Estilos para o conteúdo do footer */
+footer .footer-content {
+    display: flex;
+    justify-content: space-between ;
+}
+
+/* Estilos para as seções do footer (contatos, redes sociais, reclame aqui) */
+footer .contacts,
+footer .social-media,
+footer .reclame-aqui {
+    flex: 1;
+}
+
+/* Estilos para as listas de contatos e redes sociais */
+footer .contacts ul,
+footer .social-media ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Estilos para os títulos das seções do footer */
+footer .contacts h3,
+footer .social-media h3,
+footer .reclame-aqui h3 {
+    color: #333;
+    margin-bottom: 15px; /* Adiciona margem inferior para separar dos itens */
+}
+
+/* Estilos para os itens das listas de contatos e redes sociais */
+footer .contacts li,
+footer .social-media li {
+    margin-bottom: 10px;
+}
+
+/* Estilos para os links das redes sociais e reclame aqui */
+footer .social-media a,
+footer .reclame-aqui a {
+    color: #555;
+    text-decoration: none;
+}
+
+/* Estilos de hover para os links das redes sociais e reclame aqui */
+footer .social-media a:hover,
+footer .reclame-aqui a:hover {
+    text-decoration: underline;
+}
+.social-media-icons a {
+    color: #555;
+    text-decoration: none;
+    font-size: 24px;
+    margin-left: 10px;
+    transition: color 0.3s;
+}
+
+.social-media-icons a:hover {
+    color: #e46685ec;
+}
+
+#dados-api{
+    td, tr, table{
+        border: 1px solid black;
+    }
+  }

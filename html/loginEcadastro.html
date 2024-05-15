@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> <!-- Configuração da codificação de caracteres como UTF-8 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Configuração de compatibilidade do navegador -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configuração da viewport para dispositivos móveis -->
+  <title>Login</title> <!-- Título da página -->
+  <link rel="icon" href="../img/brand_hello_kitty_icon_158867.png" type="image/png">
+  <link rel="stylesheet" href="../css/login.css"> <!-- Importação do arquivo CSS externo -->
+  <link rel="stylesheet" href="../style.css">
+  <script src="../js/cadastro.js"></script>   <!-- Importação do arquivo JavaScript -->
+  <script src="../js/login.js"></script> 
+  <script src="https://kit.fontawesome.com/cf6fa412bd.js" crossorigin="anonymous"></script> <!-- Importação do kit de ícones Font Awesome -->
+</head>
+<body>
+  <div class="navbar">
+    <!--CLASSE LOGO E CHAMADA DA LOGO-->
+    <div class="logo">  
+         <a href="/index.html"><img src="../img/hello-kitty-poster.png" width="60px" height="55"></a> 
+    </div>
+    <!--NAVEGAÇÃO DA PÁGINA-->
+    <nav>
+        <ul>
+            <li class="dropdown">
+                <a href="../html/login.html">CONTA</a>
+                <ul class="dropdown-menu">
+                    <li><a href="../html/login.html"><i class="fa fa-sign-out-alt"></i> CONTA</a></li>
+                </ul>
+        </ul>
+    </nav>
+    <img src="../img/compra.png" width="27px" height="27px">
+  </div>
+
+  <div class="container"> <!-- Div de contêiner principal -->
+    <div class="buttonsForm"> <!-- Div para os botões -->
+      <div class="btnColor"></div> <!-- Div para a cor de fundo dos botões -->
+      <button id="btnSignin" >Entrar</button> <!-- Botão de login -->
+      <button id="btnSignup">Cadastro</button> <!-- Botão de cadastro -->
+    </div>
+
+    <form id="signin"> <!-- Formulário de login -->
+      <input type="text" id="email1" placeholder="Email" required /> <!-- Campo de entrada para o email -->
+      <input type="password" id="password1" placeholder="Senha" required /> <!-- Campo de entrada para a senha -->
+      <div class="divCheck"> <!-- Div para a caixa de seleção "Lembre minha senha" -->
+        <input type="checkbox" /> <!-- Caixa de seleção -->
+        <span>Lembre minha senha</span> <!-- Texto associado à caixa de seleção -->
+      </div>
+      <!--Transformar em onclick para que não tenha que usar o <A> de link e ficar q linha azul abaixo-->
+        <input type="button" onclick="LoginUsuario()" value="Logar"> <!-- Botão de envio do formulário de login -->
+    </form>
+
+
+    <!--REQUIRED:  validação do lado do cliente que impede que o formulário seja enviado sem que o campo correspondente seja preenchido.-->
+    <form id="signup" > <!-- Formulário de cadastro -->
+        <div>
+          <input type="text" id="name" placeholder="Nome" class="inputs required" oninput="nameValidate()"/> <!-- Campo de entrada para o nome  -->
+          <span class="span-required">Nome tem que ser preenchido, mínimo 3 caracteres.</span>
+        </div>
+        <div>
+          <input type="text" id="email" placeholder="Email" class="inputs required" oninput="emailValidate()"/> <!-- Campo de entrada para o email  -->
+          <span class="span-required">Digite um email valido.</span>
+        </div>
+        <div>
+          <input type="password" id="password" placeholder="Senha" class="inputs required" oninput="passwordValidate()" /> <!-- Campo de entrada para a senha -->
+          <span class="span-required">Digite uma senha senha de até 8 caracteres.</span>
+        </div>
+        <div>
+          <input type="text" id="cpf_cnpj" placeholder="CPF ou CNPJ" class="inputs required" oninput="cpfValidate()" /> <!-- Campo de entrada para a confirmação da senha -->
+          <span class="span-required">Digite um CPF válido, preecha 11 caracteres</span>
+        </div>
+        <input type="date" id="data" class="input-style" required />
+        <span class="span-required">Preencha sua data de nascimento de forma correta.</span>        
+        <div class="divCheck"> <!-- Div para a caixa de seleção "Terms" -->
+          <input type="checkbox" id="Terms" required/> <!-- Caixa de seleção -->
+          <span>Terms</span> <!-- Texto associado à caixa de seleção -->
+        </div>
+        <input type="button" onclick="VerificacaoCampos()" value="Cadastrar" id="cadastrarbtn"> <!-- Botão de envio do formulário de cadastro -->
+      </form>
+
+  <script src="../js/index.js"></script> <!-- Importação do arquivo JavaScript -->
+
+  <script src="../js/validacao.js"></script>
+</body>
+</html>

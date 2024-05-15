@@ -1,0 +1,111 @@
+/* Importa as fontes Google Fonts Poppins, Roboto e Source Sans Pro */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+
+/* Define estilos padrão para todos os elementos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif; /* Define a fonte padrão para todo o documento */
+}
+
+/* Estilos do corpo da página */
+body {
+  background-color: #dab6c5;
+  width: 100vw; /* Largura total da tela */
+  height: 100vh; /* Altura total da tela */
+  display: flex; /* Usa flexbox para centralizar verticalmente */
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+}
+
+/* Estilos do contêiner principal */
+.container {
+  background-color: rgb(241, 229, 235); /* Cor de fundo */
+  padding: 6px; /* Espaçamento interno */
+  width: 350px; /* Largura */
+  height: 555px; /* Altura */
+  display: flex; /* Usa flexbox */
+  flex-direction: column; /* Coluna para alinhar os elementos verticalmente */
+  align-items: center; /* Centraliza horizontalmente */
+  position: relative; /* Posição relativa para alinhar os formulários */
+  overflow: hidden; /* Oculta qualquer conteúdo que transborde */
+  border-radius: 10px; /* Borda arredondada */
+  box-shadow: 0 0 20px 0 darkgrey; /* Sombra */
+  overflow-y: auto; /* Adiciona uma barra de rolagem vertical somente quando necessário */
+  scrollbar-width: thin; /* Define a largura da barra de rolagem como fina */
+  scrollbar-color: transparent transparent; /* Define a cor da barra de rolagem e do trilho como transparente */
+
+  
+}
+
+/* Estilos dos formulários */
+form {
+  position: absolute; /* Posicionamento absoluto para sobrepor */
+  margin-top: -15px; /* Margem superior para separar do topo */
+  transition: .5s; /* Transição suave */
+  width: 300px; /* Largura */   
+  height: 400px; /* Altura */
+}
+
+/* Estilos do contêiner dos botões */
+/* Estilos do botão de endereço */
+.buttonsFormul button {
+  display: inline-block; /* Permite aplicar borda e padding */
+  padding: 3px; /* Espaçamento interno */
+  border: none; /* Borda sólida */
+  border-radius: 5px; /* Borda arredondada */
+  color: #381b24; /* Cor do texto */
+  text-transform: uppercase; /* Transforma o texto em maiúsculas */
+  font-size: 18px; /* Tamanho da fonte */
+  background-color: transparent; /* Cor de fundo transparente */
+  cursor: pointer; /* Altera o cursor ao passar sobre o botão */
+}
+
+
+/* Estilos do contêiner de cores */
+.btnColor {
+  position: absolute; /* Posição absoluta */
+  width: 115px; /* Largura */
+  height: 8.5%; /* Altura */
+  background: linear-gradient(to right, rgb(219, 138, 157), #f887b6); /* Gradiente de cores */
+  border-radius: 40px; /* Borda arredondada */
+  transition: .3s; /* Transição suave */
+}
+/*fimcontainer*/
+/* Estilos dos campos de entrada de texto */
+input[type="text"]
+{
+  border: none; /* Sem borda */
+  margin-top: 40px; /* Margem superior */
+  border-radius: 60px; /* Borda arredondada */
+  padding: 8px 0 8px 35px; /* Preenchimento */
+  outline: none; /* Sem destaque do contorno */
+  width: 100%; /* Largura total */
+  color: #504c4c; /* Cor do texto */
+}
+
+/*enviar cadastro endereço*/
+  input[type="button"] {
+    background: #e95685; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    border-radius: 30px; /* Borda arredondada */
+    width: 100%; /* Largura total */
+    border: none; /* Sem borda */
+    outline: none; /* Sem destaque do contorno */
+    padding: 8px 0; /* Preenchimento */
+    font-size: 15px; /* Tamanho da fonte */
+    margin-top: 15px; /* Margem superior */
+    cursor: pointer; /* Cursor do mouse */
+    text-align: center; /* Centraliza o texto */
+}
+
+/*informações de falta de preenchimento*/
+.span-required{
+  font-size: 12px;
+  display: none;
+  color: var(--color-red);
+  margin: 3px 0 0 1px;
+}
+
+  
